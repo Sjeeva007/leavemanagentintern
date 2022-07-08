@@ -1,0 +1,32 @@
+/* APP STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+  display: flex;
+  height: 100vh;
+}
+.leftSide {
+  width: 50%;
+  height: 100%;
+  /* background-color: black; */
+  background-image: url("userimage.jpg");
+  background-position: -40px;
+}
+.rightSide {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 4%;
+}
+.title {
+  text-align: center;
+  padding: 40px;
+  text-decoration: double;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
