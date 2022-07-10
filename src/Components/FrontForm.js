@@ -5,12 +5,7 @@ export default function FrontForm() {
   return (
     <div className="formContainer">
       <div className="headingContainer">
-        <h1 className="loginText" onClick={() => settoggleform(true)}>
-          Login
-        </h1>
-        <h1 className="registerText" onClick={() => settoggleform(false)}>
-          Register form
-        </h1>
+        <h1 className="loginText">{toggleform ? "LOGIN" : "REGISTER"}</h1>
       </div>
       {toggleform && (
         <div className="loginForm">
@@ -18,24 +13,34 @@ export default function FrontForm() {
           <input type="password" placeholder="Password" />
           <button className="btn">Login</button>
           <div className="forgot">
-            <a className="for" href="#">
-              Forgot Password
-            </a>
+            <p className="cursorPointer">Forgot Password</p>
+            <p className="cursorPointer" onClick={() => settoggleform(false)}>New Register</p>
           </div>
         </div>
       )}
       {!toggleform && (
         <div className="registerForm">
-          <input type="text" placeholder="Employee ID " />
-          <input type="text" placeholder="Employee Name" />
-          <input type="text" placeholder="Employee Address" />
-          <input type="text" placeholder="Employee D.O.B" />
-          <input type="text" placeholder="Employee City" />
-          <input type="text" placeholder="Employee State" />
-          <input type="text" placeholder="Employee Pincode" />
-          <input type="text" placeholder="Employee Mobile" />
+        <div className="Detail1">
+
+          <input type="text" placeholder="ID " />
+          <input style={{marginRight:0}} type="text" placeholder="Name" />
+        </div>
+          <input type="text" placeholder="Address" />
+          <div className="Detail1">
           <input type="text" placeholder="Job Type" />
-          <input type="text" placeholder="Experience" />
+          <input style={{marginRight:0}} type="text" placeholder="Experience" />
+          </div>
+          <div className="Detail1">
+
+          <input type="text" placeholder="D.O.B" />
+          <input style={{marginRight:0}} type="text" placeholder="City" />
+          </div>
+          <div className="Detail1">
+
+          <input type="text" placeholder="State" />
+          <input style={{marginRight:0}} type="text" placeholder="Pincode" />
+          </div>
+          <input type="text" placeholder="Mobile" />
           <input type="text" placeholder="Password" />
           <input type="text" placeholder="Confirm Password" />
 
@@ -45,6 +50,10 @@ export default function FrontForm() {
           </div>
         </div>
       )}
+      <div className="LoginSignupDiv">
+        <p className="loginButton" onClick={() => settoggleform(true)}>Login</p>
+        <p className="registerButton" onClick={() => settoggleform(false)}>Register</p>
+      </div>
     </div>
   );
 }

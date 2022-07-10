@@ -1,24 +1,30 @@
 .formContainer {
   height: 100%;
+  /* background-color: blue; */
+  position: relative;
+}
+.LoginSignupDiv{
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .headingContainer {
   display: flex;
 }
-.loginText,
-.registerText {
-  width: 50%;
+.loginText {
+  text-transform: capitalize;
+  margin-bottom: 3px;
   text-align: left;
-  cursor: pointer;
   font-size: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
 }
 .loginForm {
   width: 70%;
   padding: 5% 0;
   display: flex;
   flex-direction: column;
-  margin-top: 20%;
 }
 .registerForm {
   width: 70%;
@@ -42,17 +48,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  margin-top: 20px;
+}
+.cursorPointer{
+  cursor: pointer;
+}
+.loginButton,.registerButton{
+  padding: 5%;
+  cursor: pointer;
+}
+.loginButton:hover,.registerButton:hover{
+  color: rgb(171, 172, 248);
+}
+.Detail1{
+  display: flex;
+  justify-content: space-between;
 }
 
 input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px 5px 8px 0;
   display: inline-block;
   border-style: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(1, 3, 106);
+  border: 1px solid rgb(171, 172, 248);
+  border-radius: 8px;
 }
