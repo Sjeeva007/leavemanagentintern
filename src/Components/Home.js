@@ -5,38 +5,38 @@ import { useState } from "react";
 export default function Home() {
   const [first, setfirst] = useState(true);
 
-  const func = () => {
-    setfirst("Danies");
-  };
-
   return (
     <div>
-      <button onClick={func}>Danies</button>
-      <button onClick={func}>Jeeva</button>
+      <button onClick={() => setfirst("Danies")}>Danies</button>
+      <button onClick={() => setfirst("Jeeva")}>Jeeva</button>
       <button onClick={() => setfirst("Muniii")}>Muniii</button>
       <button onClick={() => setfirst("Dharun")}>Dharun</button>
-      <button onClick={() => setfirst("Babu")}>Babu</button>
-      <button onClick={() => setfirst("Hello")}>Babu</button>
-
-      {first && (
+      {first == "Danies" && (
         <div>
           <p>DANIES IS A _________</p>
         </div>
       )}
-      {!first && (
+
+      {first == "Jeeva" && (
         <div>
           <p>JEEVA IS GOOD BOY MARVELOUS BOY</p>
         </div>
       )}
-      {/* <div>
-        <p>MUNI IS A EXTRA ORDINARY HARD WORKER</p>
-      </div>
-      <div>
-        <p>DHARUN is a hot girl favourite boy</p>
-      </div>
-      <div>
-        <p>BABU is a lover of jeeva</p>
-      </div> */}
+      {first == "Muniii" && (
+        <div>
+          <p>MUNI IS A EXTRA ORDINARY HARD WORKER</p>
+        </div>
+      )}
+      {first == "Dharun" && (
+        <div>
+          <p>DHARUN is a hot girl favourite boy</p>
+        </div>
+      )}
+      {first == "Babu" && (
+        <div>
+          <p>BABU is a lover of jeeva</p>
+        </div>
+      )}
     </div>
   );
 }
