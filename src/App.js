@@ -1,15 +1,14 @@
-import "./App.css";
-import FrontForm from "./Components/FrontForm";
+// import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./Components/Home";
+import Logreg from "./Logreg";
+
 function App() {
   return (
-    <div className="App">
-      <div className="leftSide">
-        <h1 className="title">Leave Management</h1>
-      </div>
-      <div className="rightSide">
-        <FrontForm />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/logreg" element={<Logreg />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
 }
 

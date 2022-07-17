@@ -13,32 +13,41 @@ export default function FrontForm() {
           <input type="password" placeholder="Password" />
           <button className="btn">Login</button>
           <div className="forgot">
-            <p className="cursorPointer">Forgot Password</p>
-            <p className="cursorPointer" onClick={() => settoggleform(false)}>New Register</p>
+            <a href="#">
+              <p className="cursorPointer">Forgot Password</p>
+            </a>
+            <p className="cursorPointer" onClick={() => settoggleform(false)}>
+              New Register
+            </p>
           </div>
         </div>
       )}
       {!toggleform && (
         <div className="registerForm">
-        <div className="Detail1">
-
-          <input type="text" placeholder="ID " />
-          <input style={{marginRight:0}} type="text" placeholder="Name" />
-        </div>
+          <div className="Detail1">
+            <input type="text" placeholder="ID " />
+            <input style={{ marginRight: 0 }} type="text" placeholder="Name" />
+          </div>
           <input type="text" placeholder="Address" />
           <div className="Detail1">
-          <input type="text" placeholder="Job Type" />
-          <input style={{marginRight:0}} type="text" placeholder="Experience" />
+            <input type="text" placeholder="Job Type" />
+            <input
+              style={{ marginRight: 0 }}
+              type="text"
+              placeholder="Experience"
+            />
           </div>
           <div className="Detail1">
-
-          <input type="text" placeholder="D.O.B" />
-          <input style={{marginRight:0}} type="text" placeholder="City" />
+            <input type="text" placeholder="D.O.B" />
+            <input style={{ marginRight: 0 }} type="text" placeholder="City" />
           </div>
           <div className="Detail1">
-
-          <input type="text" placeholder="State" />
-          <input style={{marginRight:0}} type="text" placeholder="Pincode" />
+            <input type="text" placeholder="State" />
+            <input
+              style={{ marginRight: 0 }}
+              type="text"
+              placeholder="Pincode"
+            />
           </div>
           <input type="text" placeholder="Mobile" />
           <input type="text" placeholder="Password" />
@@ -51,8 +60,12 @@ export default function FrontForm() {
         </div>
       )}
       <div className="LoginSignupDiv">
-        <p className="loginButton" onClick={() => settoggleform(true)}>Login</p>
-        <p className="registerButton" onClick={() => settoggleform(false)}>Register</p>
+        <p className="loginButton" onClick={() => settoggleform(true)}>
+          Login
+        </p>
+        <p className="registerButton" onClick={() => settoggleform(false)}>
+          Register
+        </p>
       </div>
     </div>
   );
