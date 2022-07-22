@@ -14,8 +14,11 @@
   width: 50%;
   height: 100%;
   /* background-color: black; */
-  background-image: url("userimage.jpg");
-  background-position: -40px;
+  /* background-image: url("userimage.jpg"); */
+  background-image: url("casualman.png");
+  background-repeat: no-repeat;
+
+  background-position: 70px;
 }
 .rightSide {
   width: 50%;
