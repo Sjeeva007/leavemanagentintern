@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 .loginButton:hover,.registerButton:hover{
-  color: rgb(171, 172, 248);
+  color: #abacf8;
 }
 .Detail1{
   display: flex;
